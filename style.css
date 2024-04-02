@@ -5,46 +5,80 @@
 }
 
 body{
-    background-color: lightblue;
-    background-image: linear-gradient(45deg,#6e97c5, #235177);
-    color: rgb(214, 207, 207);
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #bfc2ca;
+    font-family: 'Poppins', Helvetica, sans-serif;
     font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
+    background-color: lightblue;
+    background-image: linear-gradient(45deg,#7face1, #235177);
+    color: rgb(214, 207, 207);
+    margin: 75px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 80vh;
+    width: 85%;
+    max-width: 810px;
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    height: 100vh;
 }
 
 .location,
-.temprature{
+.temprature,
+.details{
     display: flex;
     align-items: center;
-    justify-content: space-around;  
-    height: 30vh;
-    width: 50%;  
+    justify-content: space-between;  
+    height: 25vh;
+    width: 80%;  
 }
 
+/* Location */
+.location h1{
+    text-align: center;
+    font-size: 2.2em;
+}
+
+.location img{
+    width: 40%;
+    border-radius: 50px;
+}
+
+/* Temprature */
 .temprature{
-    flex-direction: column;
+    justify-content: space-around;
     padding: 80px;
+    cursor: pointer;/* So the user knows that this part is click/changeable */
+    font-size: 28px;/* The area of most interest and the most informative */
+    height: 35vh;
+    width: 50%;
+}
+.temprature span{
+    font-size: 28px;
 }
 
-.degree-section{
-  display: flex;
-  align-items: center;
-  cursor: pointer; /* So the user knows that this part is click/changeable */
+/* Details */
+.details{
+  align-items: center;cursor: pointer; /* So the user knows that this part is click/changeable */
 }
 
-.degree-section span{
-    margin: auto 10px;
-    font-size: 30px;
+.details .col{
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5em;
 }
 
-.degree-section h2{
-    font-size: 40px; /* The area of most interest and the most informative */
+.details .col img{
+    height: 5vh;
+}
+
+.details .col p:first-child{
+    margin-top: 10px;
 }
